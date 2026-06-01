@@ -1,0 +1,144 @@
+<!--This is the personal website of Chuxi Zhong-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chuxi (Asher) Zhong's home page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        @keyframes shine{
+            from{
+                background-position: 200% center;
+            }
+            to{
+                background-position: -200% center;
+            }
+        }
+        body{
+            margin: 0;
+            min-height: 100vh;
+            background-image: url('images/MainBackground.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            color: rgb(232, 232, 232);
+            
+        }
+        #return-to-top-button{
+            display: block;
+            margin: 0 auto;
+        }
+        h1{
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            background: linear-gradient(
+                70deg,
+                #0099ff,
+                #0099ff,
+                #ffffff,
+                #0099ff,
+                #0099ff
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+            text-shadow:
+                0 0 10px #00d4ff,
+                0 0 20px #00d4ff,
+                0 0 40px #00d4ff,
+        }
+        h2{
+            font-family: 'Orbitron', sans-serif;
+            color:#4dd8ff;
+            text-shadow: 
+                0 0 5px rgba(77, 216, 255, 0.6);
+        }
+        h3{
+            font-family: 'Rajdhani', sans-serif;
+            color: #8be9fd;
+            text-shadow: 
+                0 0 4px rgba(139,233,253,0.5);
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            color:#d0d8e8;
+            line-height:1.6;
+        }
+        li{
+            font-family: 'Inter', sans-serif;
+            color:#d0d8e8;
+        }
+        .contentimg {
+            border-radius:20px;
+            box-shadow:
+                0 0 15px rgba(0, 212, 255, 0.25),
+                0 0 40px rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0,212,255,0.2);
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        
+        <h1 id = "top">Self introduction</h1>
+        <ul>
+            <!--Name-->
+            <li><h2>Name</h2></li>
+                <ul><h3>First name: Chuxi</h3></ul>     
+                <ul><h3>Last name: Zhong</h3></ul>
+                <ul><h3>Nick name: Asher</h3></ul>
+            <!--hobbies-->
+            <li><h2>Hobbies</h2></li>
+            <ol>
+                <!--Piano-->
+                <li>Piano</li>
+                <p>I started playing piano when I was 4 y.o. and am currently taking piano classes in the school for credit</p>
+                <img class = "contentimg" src = "images/Pianoperformance.png" alt = "Photo of me playing moonlight sonata 3rd movement on stage" width="400">
+                <!--Tennis-->
+                <li id = "Tennis-heading-number"><h3 id = "Tennis-heading">Tennis</h3></li>
+                <p class = "Tennis-text">I started playing <em>tennis</em> my sophmore year in high school.<br>
+                I joined the JV team sophmore year and played in varsity team the reat of my high school year.</p>
+                <p class = "Tennis-text">Now I am in the club tennis team of the University of South Carolina. </p>
+                <img class = "contentimg" src = "images/tennis.png"
+                 alt = "Photo of me playing tennis in highschool" width = "400">
+                <!--Fencing-->
+                 <li id = "Fencing-heading-number"><h3 id = "Fencing-heading">Fencing</h3></li>
+                <p class = "Fencing-text">I started fencing in my freshman year in college, and I am in the Fencing club in the univesity of South Carolina</p>
+                <img class = "contentimg" src = "images/fencing.jpg" alt = "Me in the fencing suit" width = "400">
+            </ol>
+            <li><h2>Link to my other profiles</h2></li>
+            <ul>
+                <li><p><a target = "_blank" href = "https://www.linkedin.com/in/chuxi-zhong/"> Linkedln</a></p></li>
+                <li><p><a target = "_blank" href = "https://github.com/asherzcx-cyber">Github</a></p></li>
+            </ul>
+            <li><h2>Facts about computational neuroscience</h2></li>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model Name</th>
+                        <th>Type</th>
+                    </tr>
+                    <tr>
+                        <td>Leaky intergrate and fire model</td>
+                        <td>Single neuron model</td>
+                    </tr>
+                    <tr>
+                        <td>Hodgkin-Huxley type model</td>
+                        <td>Single neuron model</td>
+                    </tr>
+                    <tr>
+                        <td>Neural mass model</td>
+                        <td>Group neuron type model</td>
+                    </tr>
+                </thead>
+            </table>
+        </ul>
+        <!--The image of the botton is generated by Chatgpt-->
+        <a href = "#top"><img id = "return-to-top-button" src = "images/Backtotop.png" alt = "Return to top button" width = "500" ></a>
+    </body>
+</html>
