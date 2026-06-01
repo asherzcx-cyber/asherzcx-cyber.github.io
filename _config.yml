@@ -1,0 +1,23 @@
+# Jekyll Configuration for GitHub Pages
+
+# Site settings
+title: Asherzcx-cyber's Homepage
+description: A personal webpage introducing myself, my interests, and skills
+url: https://asherzcx-cyber.github.io
+baseurl: ""
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown settings
+markdown: kramdown
+
+# Exclude files
+exclude:
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
