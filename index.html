@@ -18,23 +18,47 @@
                 left: 90%;
                 top:50%;
             }
+            #hypercube_place{
+                text-align: right;
+                margin:20px,0;
+                flex-shrink: 0;
+                z-index:2;
+                position:relative;
+            }
+            .swimming_section{
+                display: flex;
+                align-items: flex-start;
+                gap: 200px;
+            }
+            #background-canvas{
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                pointer-events: none;
+            }
+            #page-content{
+                position: relative;
+                z-index: 1;
+            }
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
     </head>
     <body>
-        
+        <div id="page-content">
         <h1 id = "top">Self introduction</h1>
         <ul>
             <!--Name-->
             <li><h2>Name</h2>
-                <ul><h3>First name: Chuxi</h3></ul>     
-                <ul><h3>Last name: Zhong</h3></ul>
-                <ul><h3>Nick name: Asher</h3></ul>
+                <h3 style="margin-left:40px; line-height: 2;">First name: Chuxi
+                <br>    Last name: Zhong
+                <br>    Nickname: Asher</h3>
             </li>
             <!--hobbies-->
             <li><h2>Hobbies</h2>
                 <ol>
                     <!--Piano-->
-                    <li>Piano
+                    <li><h3>Piano</h3>
                         <p>I started playing piano when I was 4 y.o. and am currently taking piano classes in the school for credit</p>
                         <img class = "contentimg" src = "images/Pianoperformance.png" alt = "Photo of me playing moonlight sonata 3rd movement on stage" width="400">
                     </li>
@@ -51,8 +75,135 @@
                         <p class = "Fencing-text">I started fencing in my freshman year in college, and I am in the Fencing club in the univesity of South Carolina</p>
                         <img class = "contentimg" src = "images/fencing.jpg" alt = "Me in the fencing suit" width = "400">
                     </li>
+                    <!--Swimming-->
+                    <li><h3>Swimming</h3>
+                        <div class = "swimming_section">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>set x lap</th>
+                                    <th>25yard</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>9X1+1X2</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>5X1+5X2</td>
+                                    <td>17s</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>weekend</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>weekend</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>1x1+9x2</td>
+                                    <td>16s</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>10X2</td>
+                                    <td>16s</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>9x2+1x3</td>
+                                    <td>14s</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>5x2+5x3</td>
+                                    <td>15s</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>1x2+9x3</td>
+                                    <td>14s</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>weekend</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>weekend</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>10x3</td>
+                                    <td>NA teaching my friend swimming</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>rest</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>rest</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>3x3+7X4</td>
+                                    <td>15s</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>rest</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>weekend</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>weekend</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>10x4</td>
+                                    <td>15s My leg cramped...</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>4x4+1x10</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>1x24</td>
+                                    <td>14s my endurance just exploded</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>massive shooting few blocks away</td>
+                                    <td>from school. suspect still at large, safty first</td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div id = "hypercube_place"></div>
+                        <script src="hypercube.js"></script>
+                        </div>
+                    </li>
                 </ol>
             </li>
+            
             <li><h2>Link to my other profiles</h2>
                 <ul>
                     <li><p><a target = "_self" href = "https://www.linkedin.com/in/chuxi-zhong/"> Linkedln</a></p></li>
@@ -82,8 +233,18 @@
                 </table>
             </li>
         </ul>
-        <!--The image of the button is generated by ChatGPT -->
+        <br>
+        <h1>Self Displine Update</h1>
+        <p id = "data">
+            Level: 0<br>
+            Class: NA<br>
+            Weight: 188.8 pound
+        </p>
+        <!--The image of the botton is generated by Chatgpt-->
         <a href = "#top"><img id = "return-to-top-button" src = "images/Backtotop.png" alt = "Return to top button" width = "500" ></a>
         <a href="#top"><img id="fixed-return-to-top-button" src="images/Fixedbacktotop.png" alt="return to top" width="100"></a>
+
+        </div>
+        <script src="Backgroundglow.js"></script>
     </body>
 </html>
